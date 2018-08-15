@@ -4,25 +4,25 @@ import (
 	"fmt"
 )
 
-type Node struct {
+type node struct {
 	val int
-	l   *Node
-	r   *Node
+	l   *node
+	r   *node
 }
 
 type BST struct {
-	root *Node
+	root *node
 }
 
-func getNode(val int) *Node {
-	b := new(Node)
+func getNode(val int) *node {
+	b := new(node)
 	b.l = nil
 	b.r = nil
 	b.val = val
 	return b
 }
 
-func (n *Node) add(val int) *Node {
+func (n *node) add(val int) *node {
 	if n == nil {
 		n = getNode(val)
 		return n
@@ -45,7 +45,7 @@ func (b *BST) Add(val int) {
 	b.root.add(val)
 }
 
-func (n *Node) append(values []int)[]int {
+func (n *node) append(values []int)[]int {
 	if n != nil {
 		values = n.l.append(values)
 		values = append(values, n.val)
