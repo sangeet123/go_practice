@@ -24,9 +24,9 @@ func main() {
 		}
 	}
 
-	for k, v := range m{
-		if v > 1{
-			fmt.Printf("%s:<%d>\n",k,v);
+	for k, v := range m {
+		if v > 1 {
+			fmt.Printf("%s:<%d>\n", k, v)
 		}
 	}
 }

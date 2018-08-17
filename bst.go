@@ -45,7 +45,7 @@ func (b *BST) Add(val int) {
 	b.root.add(val)
 }
 
-func (n *node) append(values []int)[]int {
+func (n *node) append(values []int) []int {
 	if n != nil {
 		values = n.l.append(values)
 		values = append(values, n.val)
