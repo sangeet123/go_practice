@@ -38,19 +38,17 @@ func (n *node) add(val int) *node {
 }
 
 func (b *BST) Add(val int) {
-	if b.root == nil {
-		b.root = getNode(val)
-		return
-	}
-	b.root.add(val)
+	b.root = b.root.add(val)
 }
 
 func (n *node) append(values []int) []int {
-	if n != nil {
-		values = n.l.append(values)
-		values = append(values, n.val)
-		values = n.r.append(values)
+	if n == nil{
+		return values
 	}
+
+	values = n.l.append(values)
+	values = append(values, n.val)
+	values = n.r.append(values)
 	return values
 }
 
