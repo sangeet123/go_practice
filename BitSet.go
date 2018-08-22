@@ -68,11 +68,11 @@ func (b *BitSet) Copy() *BitSet {
 	return r
 }
 
-func CountBitSet(n int64) int {
+func Count(n int64) int {
 	if n == 0 {
 		return 0
 	}
-	return 1 + CountBitSet(n&(n-1))
+	return 1 + Count(n&(n-1))
 }
 
 func (b *BitSet) String() string {
