@@ -7,7 +7,7 @@ import (
 )
 
 func CountingWriter(w io.Writer) (io.Writer, *int64) {
-	r := int64(len(fmt.Sprintf("%s",w)))
+	r := int64(len(fmt.Sprintf("%s", w)))
 	return w, &r
 }
 
